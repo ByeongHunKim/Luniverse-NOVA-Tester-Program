@@ -24,7 +24,7 @@ $ npx hardhat test test/Lock.ts
 ## 3. environment variables
 
 ```env
-ALCHEMY_MUMBAI_API_KEY=
+LUNIVERSE_MUMBAI_API_KEY
 ALCHEMY_SEPOLIA_API_KEY=
 PRIVATE_KEY=
 ```
@@ -40,3 +40,31 @@ PRIVATE_KEY=
 # sepolia bscMainnet bscTestnet
 $ npx hardhat run scripts/deploy.ts --network mumbai
 ```
+
+[//]: # (---)
+
+[//]: # (## 5. Web3 Engine - Multichain API TEST)
+
+[//]: # (| [Account&#40;Wallet&#41;]&#40;https://developer.luniverse.io/reference/account&#41; | HTTP 메서드 | 성공 여부 | 날짜     |)
+
+[//]: # (|---------------------------------------------------------------------|----------|-------|--------|)
+
+[//]: # (| listAccountBalance                                                  | GET      | 미성공   | 230812 |)
+
+[//]: # (| listMultiAccountsBalance                                                  | POST     | 미성공   | 230812 |)
+
+[//]: # (| listAccountTransactions                                                  | GET      | 미성공   | 230812 |)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (| [Block/Transaction]&#40;https://developer.luniverse.io/reference/blocktransaction&#41; | HTTP 메서드 | 성공 여부 | 날짜     |)
+
+[//]: # (|---------------------------------------------------------------------|----------|-------|--------|)
+
+[//]: # (| getGasPrice                                                  | GET      | 미성공   | 230812 |)
+
+[//]: # ()
+[//]: # ()
+[//]: # (---)

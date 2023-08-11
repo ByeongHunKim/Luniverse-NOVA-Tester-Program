@@ -3,7 +3,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import { config as dotEnvConfig } from "dotenv";
 dotEnvConfig();
 
-const ALCHEMY_MUMBAI_API_KEY = process.env.ALCHEMY_MUMBAI_API_KEY ? process.env.ALCHEMY_MUMBAI_API_KEY : '';
+const LUNIVERSE_MUMBAI_API_KEY = process.env.LUNIVERSE_MUMBAI_API_KEY ? process.env.LUNIVERSE_MUMBAI_API_KEY : '';
 const ALCHEMY_SEPOLIA_API_KEY = process.env.ALCHEMY_SEPOLIA_API_KEY ?  process.env.ALCHEMY_SEPOLIA_API_KEY : "";
 const PRIVATE_KEY = process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "";
 
@@ -12,7 +12,7 @@ const config: HardhatUserConfig = {
   defaultNetwork: "local",
   networks: {
     mumbai:{
-      url: `https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_MUMBAI_API_KEY}`,
+      url: `https://polygon-mumbai.luniverse.io/${LUNIVERSE_MUMBAI_API_KEY}`,
       chainId: 80001,
       accounts: [PRIVATE_KEY],
     },
