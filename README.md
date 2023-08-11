@@ -24,7 +24,7 @@ $ npx hardhat test test/Lock.ts
 ## 3. environment variables
 
 ```env
-LUNIVERSE_MUMBAI_API_KEY
+LUNIVERSE_MUMBAI_API_KEY=
 ALCHEMY_SEPOLIA_API_KEY=
 PRIVATE_KEY=
 ```
