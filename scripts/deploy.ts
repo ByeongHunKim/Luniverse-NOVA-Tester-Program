@@ -3,22 +3,20 @@ import { getDatetimeString } from '../utils/timeUtils';
 async function main() {
   const currentTimestampInSeconds = Math.round(Date.now());
   const contractCreatedTime = getDatetimeString(currentTimestampInSeconds)
-  const unlockTime = currentTimestampInSeconds + 60;
-  const Lock = await ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime);
-
-  await lock.deployed();
+  const Agenda = await ethers.getContractFactory("Agenda");
+  const agenda = await Agenda.deploy("0x5661100D9463c5Df320480a8460d50Dfc39dB9D9", "0x5661100D9463c5Df320480a8460d50Dfc39dB9D9");
+  await agenda.deployed();
 
   console.log(
-    `${lock.address} contract is deployed at ${contractCreatedTime}`
+    `${agenda.address} contract is deployed at ${contractCreatedTime}`
   );
   console.log(`
  click this link if you deploy contract on Ethereum Sepolia Testnet
- https://sepolia.etherscan.io/address/${lock.address} \n
+ https://sepolia.etherscan.io/address/${agenda.address} \n
  click this link if you deploy contract on Bianace Smart Chain Testnet
- https://testnet.bscscan.com/address/${lock.address} \n
+ https://testnet.bscscan.com/address/${agenda.address} \n
  click this link if you deploy contract on Polygon Mumbai Testnet
- https://mumbai.polygonscan.com/address/${lock.address} \n
+ https://mumbai.polygonscan.com/address/${agenda.address} \n
   `)
 }
 
