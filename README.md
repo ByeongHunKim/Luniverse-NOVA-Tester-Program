@@ -18,7 +18,7 @@
 ## 2. testing contract
 
 ```bash
-$ npx hardhat test test/Lock.ts
+$ npx hardhat test test/
 ```
 
 ## 3. environment variables
@@ -30,9 +30,6 @@ PRIVATE_KEY=
 ```
 
 ## 4. deploying contract
-
-- `scripts/` 폴더에 있는 파일 실행
-- 로컬에 배포 후 테스트 하는 방법
   - `$ npx hardhat node`
   - `$ npx hardhat run scripts/deploy.ts`
 
