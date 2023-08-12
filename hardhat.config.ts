@@ -8,7 +8,7 @@ const ALCHEMY_SEPOLIA_API_KEY = process.env.ALCHEMY_SEPOLIA_API_KEY ?  process.e
 const PRIVATE_KEY = process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.18",
+  solidity: "0.8.4",
   defaultNetwork: "local",
   networks: {
     mumbai:{
