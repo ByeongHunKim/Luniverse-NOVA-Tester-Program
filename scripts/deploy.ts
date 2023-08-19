@@ -4,7 +4,7 @@ async function main() {
   const currentTimestampInSeconds = Math.round(Date.now());
   const contractCreatedTime = getDatetimeString(currentTimestampInSeconds)
   const Agenda = await ethers.getContractFactory("Agenda");
-  const agenda = await Agenda.deploy("0x5661100D9463c5Df320480a8460d50Dfc39dB9D9", "0x5661100D9463c5Df320480a8460d50Dfc39dB9D9");
+  const agenda = await Agenda.deploy("0x40A6ad127e3b4C8077af42a2437cCbd3cdC7609f", "0x5661100D9463c5Df320480a8460d50Dfc39dB9D9");
   await agenda.deployed();
 
   console.log(
