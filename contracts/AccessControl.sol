@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract AccessControl is Ownable {
 
-    mapping(address => bool) public isAdminAddress; // is this required ??
+    mapping(address => bool) public isAdminAddress;
     address[] public admins;
 
     event AdminAdded(address indexed newAdmin);
@@ -23,13 +23,13 @@ contract AccessControl is Ownable {
 
     function createAdmin(address _newAdmin) external onlyOwner {
         require(!isAdminAddress[_newAdmin], "Address is already an admin");
-        isAdminAddress[msg.sender] = true;
+        isAdminAddress[_newAdmin] = true;
         admins.push(_newAdmin);
         emit AdminAdded(_newAdmin);
     }
 
     function removeAdmin(address _OldAdmin) external onlyOwner {
-        require(isAdminAddress[msg.sender], "Address is not an admin");
+        require(isAdminAddress[_OldAdmin], "Address is not an admin");
         isAdminAddress[_OldAdmin] = false;
         for(uint i = 0; i < admins.length; i++) {
             if(admins[i] == _OldAdmin) {
@@ -44,7 +44,4 @@ contract AccessControl is Ownable {
     function getAdminList() external view returns(address[] memory) {
         return admins;
     }
-
-
-
 }
